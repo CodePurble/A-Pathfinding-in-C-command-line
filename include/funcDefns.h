@@ -1,5 +1,5 @@
-#ifndef funcDefns_h
-#define funcDefns_h
+#ifndef FUNCDEFNS_H
+#define FUNCDEFNS_H
 
 // Creating GridSize struct
 typedef struct GridSize {

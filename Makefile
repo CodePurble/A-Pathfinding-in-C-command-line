@@ -2,12 +2,12 @@
 BIN_DIR=./bin
 SRC_DIR=./src
 INCLUDE_DIR=./include
-EXEC=pathfinding.out
+EXEC=pathfinding
 
 CFLAGS += -Wall -g -I$(INCLUDE_DIR)/ -lm
 
-COMPILE=$(CC) -c $^ -o $@ $(CFLAGS) 
-LINK_EXE=$(CC) -o $@ $^ $(CFLAGS) 
+COMPILE=$(CC) -c $^ -o $@ $(CFLAGS)
+LINK_EXE=$(CC) -o $@ $^ $(CFLAGS)
 
 # Create lists of src and object files for src dir
 SRC_FILES=$(wildcard $(SRC_DIR)/*.c)									# Get .c files in source
@@ -24,7 +24,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 # rather it is just a name for a recipe to be executed when you make an explicit request
 # All targets that generate files should have target name = name of file
 # so that make can correctly track if we need to rebuild the target
-.phony: all clean 
+.phony: all clean
 
 all: $(BIN_DIR)/$(EXEC)
 
